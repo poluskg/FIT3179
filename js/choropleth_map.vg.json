@@ -5,16 +5,19 @@
 	"height": 600,
 	"projection": {"type": "equirectangular"},
 	"data": {
-		"url": "https://github.com/poluskg/FIT3179/blob/main/ne_110m_admin_1_states_provinces_lakes.json",
-		"format": {"type": "topojson", "feature": "ne_110m_admin_1_states_provinces_lakes"}
+		"url": "https://raw.githubusercontent.com/poluskg/FIT3179/main/js/ne_110m_admin_1_states_provinces_lakes.json",
+		"format": {
+			"type": "topojson",
+			"feature": "ne_110m_admin_1_states_provinces_lakes"
+		}
 	},
 	"transform": [
 		{
 			"lookup": "properties.NAME",
-	      	"from": {
-	        	"data": {
-	        		"url": "https://github.com/poluskg/FIT3179/blob/main/state_data.csv"
-	        	},
+			"from": {
+	        		"data": {
+	        			"url": "https://raw.githubusercontent.com/poluskg/FIT3179/main/data/state_data.csv"
+				},
 	        	"key": "state",
 	        	"fields": ["party"]
 	        }
@@ -22,11 +25,12 @@
 	],
 	"mark": {"type": "geoshape"},
 	"encoding": {
-		"color": {
-			"field": "party"
-      	},
+		"color": {"field": "party"},
       	"tooltip": [
-      		{"field": "properties.NAME", "type": "nominal", "title": "state"}
+      		{
+			"field": "properties.NAME",
+			"type": "nominal",
+			"title": "state"}
       	]
     }
 }
