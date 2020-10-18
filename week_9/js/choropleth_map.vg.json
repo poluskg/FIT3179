@@ -12,27 +12,6 @@
 			"feature": "ne_110m_admin_1_states_provinces"
 		}
 	},
-	//"transform": [
-	//	{
-	//		"lookup": "properties.NAME",
-	//		"from": {
-	  //      		"data": {
-	    //    			"url": "https://raw.githubusercontent.com/poluskg/FIT3179/main/data/state_data.csv"
-		//		},
-	        //	"key": "state",
-	        //	"fields": ["party"]
-	        //}
-	    //}
-	//],
-	"mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
-	}]
-//"encoding": {
-//	"color": {"field": "party"},
-//"tooltip": [
-//	{
-//		"field": "properties.NAME",
-//		"type": "nominal",
-//		"title": "state"}
-// ]
+	
     }
 }
