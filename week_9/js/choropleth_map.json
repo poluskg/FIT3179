@@ -19,27 +19,11 @@
         }
     }
   ],
-	"mark": {"type": "geoshape", "stroke": "#757575", "strokeWidth": 0.5},
+	"mark": {"type": "geoshape"},
 	"encoding": {
 		"color": {
-			"condition": {
-				"test" :"state_data.party == 'REP'",
-				"value": "#DC143C"
-			}
-      	},
-      	"field": "party",
-      	"type": "categorical"
-      },
-      "tooltip": [
-      	{"field": "properties.NAME", "type": "categorical", "title": "state"}
-      ]
-    },
-    "config": {
-    	"style": {
-    		"cell": {
-    			"stroke": "transparent"
-    		}
-    	},
-    	"background": "#F2F3F4"
+			"field": "party",
+			"type": "quantitative",
+ 		}
     }
 }
