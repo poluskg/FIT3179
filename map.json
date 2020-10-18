@@ -1,32 +1,32 @@
 {
-"$schema": "https://vega.github.io.scehma/vega-lite/v4.json",
-"width":500,
-"height":300,
-"data":{
- "url":"data/USElectionData2016",
-"format": {
-      "type": "topojson",
-      "feature": "counties"
+	"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+	"title": "United States of America - 2016 Presidential Election",
+	"width": 800,
+	"height": 600,
+	"projection": {"type": "equirectangular"},
+	"data": {
+		"url": "https://github.com/poluskg/FIT3179/blob/main/ne_110m_admin_1_states_provinces_lakes.json",
+		"format": {"type": "topojson", "feature": "ne_110m_admin_1_states_provinces_lakes"}
+	},
+	"transform": [
+		{
+			"lookup": "properties.NAME",
+	      	"from": {
+	        	"data": {
+	        		"url": "https://github.com/poluskg/FIT3179/blob/main/state_data.csv"
+	        	},
+	        	"key": "state",
+	        	"fields": ["party"]
+	        }
+	    }
+	],
+	"mark": {"type": "geoshape"},
+	"encoding": {
+		"color": {
+			"field": "party"
+      	},
+      	"tooltip": [
+      		{"field": "properties.NAME", "type": "nominal", "title": "state"}
+      	]
     }
-  },
-  "transform": [{
-    "lookup": "id",
-    "from": {
-      "data": {
-        "url": "data/unemployment.tsv"
-      },
-      "key": "id",
-      "fields": ["rate"]
-    }
-  }],
-  "projection": {
-    "type": "albersUsa"
-  },
-  "mark": "geoshape",
-  "encoding": {
-    "color": {
-      "field": "rate",
-      "type": "quantitative"
-    }
-  }
 }
