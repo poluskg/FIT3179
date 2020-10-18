@@ -3,7 +3,7 @@
 	"title": "United States of America - 2016 Presidential Election",
 	"width": 800,
 	"height": 600,
-	"projection": {"type": "equirectangular"},
+	"projection": {"type": "albersUsa"},
 	"data": {
 		"url": "https://poluskg.github.io/FIT3179/week_9/js/ne_110m_admin_1_states_provinces.json",
 		"format": {"type": "topojson", "feature": "ne_110m_admin_1_states_provinces"}
@@ -21,9 +21,6 @@
   ],
 	"mark": {"type": "geoshape"},
 	"encoding": {
-		"color": {
-			"field": "party",
-			"type": "quantitative"
- 		}
+		"color": {"field": "party", "type": "nominal", "scale": null}
     }
 }
