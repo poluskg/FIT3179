@@ -5,10 +5,10 @@
 	"height": 600,
 	"projection": {"type": "equirectangular"},
 	"data": {
-		"url": "https://raw.githubusercontent.com/poluskg/FIT3179/main/js/ne_110m_admin_1_states_provinces_lakes.json",
+		"url": "https://raw.githubusercontent.com/poluskg/FIT3179/main/js/ne_110m_admin_1_states_provinces.topojson",
 		"format": {
 			"type": "topojson",
-			"feature": "ne_110m_admin_1_states_provinces_lakes"
+			"feature": "ne_110m_admin_1_states_provinces"
 		}
 	},
 	"transform": [
