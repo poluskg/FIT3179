@@ -23,7 +23,7 @@
 	"encoding": {
 		"color": {
 			"field": "party",
-			"type": "quantitative",
+			"type": "quantitative"
  		}
     }
 }
