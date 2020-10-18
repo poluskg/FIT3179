@@ -4,13 +4,42 @@
 	"width": 800,
 	"height": 600,
 	"projection": {"type": "equirectangular"},
-	"layer": [{
-		"data": {
-		"url": "https://raw.githubusercontent.com/poluskg/FIT3179/main/js/ne_110m_admin_1_states_provinces.topojson",
-		"format": {
-			"type": "topojson",
-			"feature": "ne_110m_admin_1_states_provinces"
+	"data": {
+		"url": "https://poluskg.github.io/FIT3179/week_9/js/ne_110m_admin_1_states_provinces_lakes.json",
+		"format": {"type": "topojson", "feature": "ne_110m_admin_1_states_provinces"}
+	},
+	"transform": [{
+		"lookup": "properties.NAME",
+      	"from": {
+        	"data": {
+        		"url": "https://poluskg.github.io/FIT3179/week_9/data/state_data.csv"
+        	},
+        	"key": "state",
+        	"fields": ["party"] 
+        }
+    }
+  ],
+	"mark": {"type": "geoshape", "stroke": "#757575", "strokeWidth": 0.5},
+	"encoding": {
+		"color": {
+			"condition": {
+				"test" :"state_data.party == 'REP'",
+				"value": "#DC143C"
 			}
-		}
-	}]
+      	},
+      	"field": "party",
+      	"type": "categorical"
+      },
+      "tooltip": [
+      	{"field": "properties.NAME", "type": "categorical", "title": "state"}
+      ]
+    },
+    "config": {
+    	"style": {
+    		"cell": {
+    			"stroke": "transparent"
+    		}
+    	},
+    	"background": "#F2F3F4"
+    }
 }
