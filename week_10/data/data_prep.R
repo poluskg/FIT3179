@@ -34,8 +34,9 @@ state_data = county_data %>% group_by(state) %>%
     trump16 = sum(trump16),
     clinton16 = sum(clinton16),
     otherpres16 = sum(otherpres16),
-    total_population = sum(total_population), 
+    total_population = sum(total_population),
     cvap = sum(cvap),
+    total_votes = sum(trump16, clinton16, otherpres16),
     white_pct = sum(white_pct),
     black_pct = sum(black_pct),
     hispanic_pct = sum(hispanic_pct),
@@ -54,8 +55,18 @@ state_data = county_data %>% group_by(state) %>%
     party = "NONE"
     )
 
-attach(state_data)
 
+# Add state weights
+weights = data.frame(
+  state=state_data$state, 
+  weight=c(0)
+)
+
+# Merge datasets
+state_data = cbind(weights, state_data)
+state_data = state_data[-c(3)]
+
+attach(state_data)
 for (i in 1:length(state_data$party)) {
   if (trump16[i] > clinton16[i] & trump16[i] > otherpres16[i]) {
     state_data$party[i] = "#DC143C"
