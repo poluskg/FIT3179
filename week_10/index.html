@@ -13,20 +13,20 @@
 <br>
 
 <h2>Visualisation 1</h2>
-<div id="vis1"></div>
+<div id="choropleth_map"></div>
 
 <h2>Visualisation 2</h2>
-<div id="vis2"></div>
+<div id="stacked_bar_chart"></div>
 
 <script type="text/javascript">
-  var specVis1 = "./js/stacked_bar_chart.vg.json";
-  var specVis2= "../../../week_9/js/choropleth_map.vg.json";
+  var specVis1= "../week_9/js/choropleth_map.vg.json";
+  var specVis2 = "./js/stacked_bar_chart.vg.json";
 
-  vegaEmbed('#vis1', specVis1).then(function(result) {
+  vegaEmbed('#choropleth_map', specVis1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-   vegaEmbed('#vis2', specVis2).then(function(result) {
+   vegaEmbed('#stacked_bar_chart', specVis2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
