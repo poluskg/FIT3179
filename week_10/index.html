@@ -12,22 +12,21 @@
 <h1>Week 10 Homework Assessment Task</h1>
 <br>
 
-<h2>Visualisation 1:</h2>
-<div id="choropleth_map"></div>
+<h2>Visualisation 1</h2>
+<div id="vis1"></div>
 
-<h2>Visualisation 1:</h2>
-<div id="stacked_bar_chart"></div>
+<h2>Visualisation 2</h2>
+<div id="vis2"></div>
 
-<div id="vis"></div>
 <script type="text/javascript">
-  var vis1 = "https://poluskg.github.io/FIT3179/week_9/js/choropleth_map.vg.json"; 
-  var vis2 = "https://poluskg.github.io/FIT3179/week_10/js/stacked_bar_chart.vg.json";   
-  
-  vegaEmbed('#vis1', choropleth_map).then(function(result) {
+  var specVis1 = "./js/stacked_bar_chart.vg.json";
+  var specVis2= "../../../week_9/js/choropleth_map.vg.json";
+
+  vegaEmbed('#vis1', specVis1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  vegaEmbed('#vis2', stacked_bar_chart).then(function(result) {
+   vegaEmbed('#vis2', specVis2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
