@@ -1,18 +1,35 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "data": {
-      "url": "https://poluskg.github.io/FIT3179/week_9/data/state_data.csv"
-    },
-    "width":"container",
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://poluskg.github.io/FIT3179/week_10/data/cleaned_state_data.csv"
+  },
+  "repeat": {
+    "layer":[
+      "total_population",
+      "cvap",
+      "total_votes"
+    ]
+  },
+  "spec": {
     "mark": "bar",
     "encoding": {
-      "x": {},
-      "y": {}
+      "x": {"field": "state"},
+      "y": {
+        "aggregate": "sum",
+        "stack": "normalize",
+        "field": {"repeat": "layer"},
+        "title": "Breakdown of Total Population"
       },
-      "color": {},
-        "title": "Proportion of 'Voting-Age' Citizens to Actual Voters Per Demographic, By State"
+      "color": {
+        "datum": {"repeat": "layer"},
+        "type": "nominal"
       }
     },
-    "config": {}
+    "tooltip": [
+      {"field": "state", "type": "quantitative", "format": ","},
+      {"field": "total_population", "type": "quantitative", "format": ","},
+      {"field": "total_votes", "type": "quantitative", "format": ","},
+      {"field": "cvap", "type": "quantitative", "format": ","}
+    ]
   }
-  
+}
