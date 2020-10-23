@@ -1,8 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {
-    "url": "https://poluskg.github.io/FIT3179/week_10/data/cleaned_state_data.csv"
+    "url": "https://poluskg.github.io/FIT3179/week_10/data/folded_data.csv"
   },
+  "title": "Demographic Breakdown by State",
   "params": [
     {
       "name": "state_selection",
@@ -34,42 +35,28 @@
           "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington",
           "West Virginia", "Wisconsin", "Wyoming"
         ],
-        "name": "state_selection"
+        "name": "Select a State:"
       }
     }
   ],
   "transform": [
     {"filter": "state_selection == null || datum.state == state_selection"}
   ],
-  "repeat": {
-    "layer":[
-      "total_population",
-      "cvap",
-      "total_votes"
-    ]
-  },
-  "spec": {
-    "mark": "bar",
-    "encoding": {
-      "x": {
-        "field": "state",
-        "title": "State"
-      },
-      "y": {
-        "aggregate": "sum",
-        "stack": "normalize",
-        "field": {"repeat": "layer"},
-        "title": "Total Population of State"
-      },
-      "color": {
-        "datum": {"repeat": "layer"},
-        "type": "nominal"
-      },
-      "tooltip": [
-      {"field": "total_population", "type": "quantitative", "format": ","},
-      {"field": "total_votes", "type": "quantitative", "format": ","},
-      {"field": "cvap", "type": "quantitative", "format": ","}
-    ]
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Demographic",
+      "type": "nominal",
+      "title": "Demographic"
+    },
+    "y": {
+      "field": "Dem_pop",
+      "aggregate": "sum",
+      "type": "quantitative",
+      "title": "Population Count"
+    },
+    "color": {
+      "field": "Demographic"
     }
   }
 }
