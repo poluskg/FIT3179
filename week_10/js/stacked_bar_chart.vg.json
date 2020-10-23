@@ -57,6 +57,10 @@
     },
     "color": {
       "field": "Demographic"
-    }
+    },
+	"tooltip": [
+		{"field": "Demographic"},
+		{"field": "sum_Dem_pop"}
+	]
   }
 }
