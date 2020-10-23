@@ -3,6 +3,44 @@
   "data": {
     "url": "https://poluskg.github.io/FIT3179/week_10/data/cleaned_state_data.csv"
   },
+  "params": [
+    {
+      "name": "state_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null, "Alabama", "Arizona", "Arkansas", "California",
+          "Colorado", "Connecticut", "Delaware", "District of Columbia",
+          "Florida", "Georgia", "Hawaii", "Idaho", "Illinois",
+          "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana",
+          "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota",
+          "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada",
+          "New Hampshire", "New Jersey", "New Mexico", "New York", 
+          "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon",
+          "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota",
+          "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington",
+          "West Virginia", "Wisconsin", "Wyoming"
+        ],
+        "labels": [
+          "Show All", "Alabama", "Arizona", "Arkansas", "California",
+          "Colorado", "Connecticut", "Delaware", "District of Columbia",
+          "Florida", "Georgia", "Hawaii", "Idaho", "Illinois",
+          "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana",
+          "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota",
+          "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada",
+          "New Hampshire", "New Jersey", "New Mexico", "New York", 
+          "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon",
+          "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota",
+          "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington",
+          "West Virginia", "Wisconsin", "Wyoming"
+        ],
+        "name": "state_selection"
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "state_selection == null || datum.state == state_selection"}
+  ],
   "repeat": {
     "layer":[
       "total_population",
@@ -13,23 +51,25 @@
   "spec": {
     "mark": "bar",
     "encoding": {
-      "x": {"field": "state"},
+      "x": {
+        "field": "state",
+        "title": "State"
+      },
       "y": {
         "aggregate": "sum",
         "stack": "normalize",
         "field": {"repeat": "layer"},
-        "title": "Breakdown of Total Population"
+        "title": "Total Population of State"
       },
       "color": {
         "datum": {"repeat": "layer"},
         "type": "nominal"
-      }
-    },
-    "tooltip": [
-      {"field": "state", "type": "quantitative", "format": ","},
+      },
+      "tooltip": [
       {"field": "total_population", "type": "quantitative", "format": ","},
       {"field": "total_votes", "type": "quantitative", "format": ","},
       {"field": "cvap", "type": "quantitative", "format": ","}
     ]
+    }
   }
 }
