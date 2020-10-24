@@ -23,8 +23,12 @@
     {
       "mark": {"type": "geoshape"},
       "encoding": {
-        "color": {"field": "party", "type": "nominal", "scale": null}
+        "color": {
+          "field": "party",
+          "type": "nominal",
+          "scale": null
         }
+      }
     },
     {
       "data": {
@@ -45,8 +49,12 @@
           "type": "text"
         },
         "encoding": {
-          "text": {"field": "state", "type": "nominal"},
-          "color": {"value": "white"}
+          "text": {"field": "state_ab", "type": "nominal"},
+          "color": {"value": "white"},
+          "tooltip": [
+            {"field": "state"},
+            {"field": "weight"}
+          ]
         }
       }]
     }
