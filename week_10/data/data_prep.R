@@ -61,17 +61,6 @@ state_data = county_data %>% group_by(state) %>%
     Party_16 = "NONE"
     )
 
-
-# Add state weights
-weights = data.frame(
-  state=state_data$state, 
-  weight=c(0)
-)
-
-# Merge datasets
-state_data = cbind(weights, state_data)
-state_data = state_data[-c(3)]
-
 # Derive colour of state 2012
 for (i in 1:length(state_data$Party_12)) {
   if (state_data$Romney_12[i] > state_data$Obama_12[i] & state_data$Romney_12[i] > state_data$Otherpres_12[i]) {
@@ -94,12 +83,26 @@ for (i in 1:length(state_data$Party_16)) {
   }
 }
 
-
 # Fold dataset against demographic and other pct
 df <- gather(state_data, Demographic, Dem_pop, White:Foreign_born, factor_key=TRUE)
 df <- df[order(df$state, df$Demographic),]
 
+# Write to csv
+write.csv(df, "folded_data.csv")
+
+# Open data with longitude/latitude values
+longLatStates = read.csv("statesLongLat.csv", header=TRUE)
+
+# Add state weights
+weights = data.frame(
+  state=longLatStates$state, 
+  weight=c(0)
+)
+
+# Merge data, remove state col, AL & PR
+longLatStates = cbind(weights, longLatStates)
+longLatStates = longLatStates[-c(1, 40),]
+longLatStates = longLatStates[-c(6)]
 
 # Write to csv
-write.csv(state_data, "cleaned_state_data.csv")
-write.csv(df, "folded_data.csv")
+write.csv(longLatStates, "cleanedLongLatStates.csv")
