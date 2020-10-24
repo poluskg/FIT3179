@@ -12,15 +12,43 @@
 		"lookup": "properties.name",
       	"from": {
         	"data": {
-        		"url": "https://poluskg.github.io/FIT3179/week_9/data/state_data.csv"
+        		"url": "https://poluskg.github.io/FIT3179/week_10/data/cleaned_state_data.csv"
         	},
         	"key": "state",
         	"fields": ["party"] 
         }
     }
   ],
-	"mark": {"type": "geoshape"},
-	"encoding": {
-		"color": {"field": "party", "type": "nominal", "scale": null}
+  "layer": [
+    {
+      "mark": {"type": "geoshape"},
+      "encoding": {
+        "color": {"field": "party", "type": "nominal", "scale": null}
+        }
+    },
+    {
+      "data": {
+        "url": "https://poluskg.github.io/FIT3179/week_10/data/cleanedLongLatStates.csv"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        }
+      },
+      "layer": [{
+        "mark": {
+          "type": "text"
+        },
+        "encoding": {
+          "text": {"field": "state", "type": "nominal"},
+          "color": {"value": "white"}
+        }
+      }]
     }
+  ]
 }
