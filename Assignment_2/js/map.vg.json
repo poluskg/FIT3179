@@ -12,7 +12,7 @@
 		"lookup": "properties.name",
       	"from": {
         	"data": {
-        		"url": "https://poluskg.github.io/FIT3179/Assignment_2/data/cleaned_state_data.csv"
+        		"url": "https://poluskg.github.io/FIT3179/week_10/data/cleaned_state_data.csv"
         	},
         	"key": "state",
         	"fields": ["party"] 
