@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+
+<h1>Analysis of the 2016 US Presidential Election</h1>
+<br>
+
+<h2>Electoral Vote</h2>
+<div id="map"></div>
+
+<h2>Demographic Breakdown by State</h2>
+<div id="pie_chart"></div>
+
+<script type="text/javascript">
+  var specVis1= "./js/map.vg.json"; 
+  var specVis2 = "./js/donut.json";
+
+  vegaEmbed('#map', specVis1).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+   vegaEmbed('#pie_chart', specVis2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
+</body>
+</html>
