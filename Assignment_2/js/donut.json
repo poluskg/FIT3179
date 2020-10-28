@@ -4,6 +4,8 @@
   "data": {
     "url": "https://poluskg.github.io/FIT3179/Assignment_2/data/cleaned_state_data.csv"
   },
+  "width": 600,
+	"height": 600,
   "params": [
     {
       "name": "state_selection",
