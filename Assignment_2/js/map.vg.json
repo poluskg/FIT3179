@@ -1,8 +1,8 @@
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
 	"title": "United States of America - 2016 Presidential Election",
-	"width": 800,
-	"height": 600,
+	"width": 1000,
+	"height": 800,
 	"projection": {"type": "albersUsa"},
 	"data": {
 		"url": "https://poluskg.github.io/FIT3179/week_9/js/ne_110m_admin_1_states_provinces.json",
@@ -27,7 +27,8 @@
           "field": "party",
           "type": "nominal",
           "scale": null
-        }
+        },
+        "tooltip": [{"field": "properties.name"}]
       }
     },
     {
@@ -52,7 +53,8 @@
           "text": {"field": "Weight", "type": "nominal"},
           "color": {"value": "white"},
           "tooltip": [
-            {"field": "state"}
+            {"field": "state"},
+            {"field": "Weight"}
           ]
         }
       }]
