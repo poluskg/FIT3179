@@ -15,7 +15,7 @@
         		"url": "https://poluskg.github.io/FIT3179/Assignment_2/data/divergingColourData.csv"
         	},
         	"key": "state",
-        	"fields": ["VoteDiff"] 
+        	"fields": ["VoteDiff", "Dem_16", "Rep_16", "Other_16", "rawVoteDiff"] 
         }
     }
   ],
@@ -26,11 +26,18 @@
         "color": {
           "field": "VoteDiff",
           "type": "quantitative",
-          "scale": {
-            "scheme": "redblue"
+          "sort": "descending",
+          "scale":{
+            "scheme": "redblue"  
           }
         },
-        "tooltip": [{"field": "properties.name", "title": "State"}]
+        "tooltip": [
+          {"field": "properties.name", "title": "State"},
+          {"field": "Dem_16", "title": "Democrat Party", "format": ","},
+          {"field": "Rep_16", "title": "Republican Party", "format": ","},
+          {"field": "rawVoteDiff", "title": "Rep/Dem Vote Diff"},
+          {"field": "Other_16", "title": "Other Parties", "format": ","}
+        ]
       }
     },
     {
