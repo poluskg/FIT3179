@@ -21,14 +21,14 @@
   ],
   "layer": [
     {
-      "mark": {"type": "geoshape"},
+      "mark": {"type": "geoshape", "stroke":"lightgray", "strokeWidth": 0.5},
       "encoding": {
         "color": {
           "field": "party",
           "type": "nominal",
           "scale": null
         },
-        "tooltip": [{"field": "properties.name"}]
+        "tooltip": [{"field": "properties.name", "title": "State"}]
       }
     },
     {
@@ -53,8 +53,8 @@
           "text": {"field": "Weight", "type": "nominal"},
           "color": {"value": "white"},
           "tooltip": [
-            {"field": "state"},
-            {"field": "Weight"}
+            {"field": "state", "title": "State"},
+            {"field": "Weight", "title": "Vote Weight"}
           ]
         }
       }]
