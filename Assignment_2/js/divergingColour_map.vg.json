@@ -1,0 +1,65 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+	"title": "United States of America - 2016 Presidential Election",
+	"width": 700,
+	"height": 500,
+	"projection": {"type": "albersUsa"},
+	"data": {
+		"url": "https://poluskg.github.io/FIT3179/week_9/js/ne_110m_admin_1_states_provinces.json",
+		"format": {"type": "topojson", "feature": "ne_110m_admin_1_states_provinces"}
+	},
+	"transform": [{
+		"lookup": "properties.name",
+      	"from": {
+        	"data": {
+        		"url": "https://poluskg.github.io/FIT3179/Assignment_2/data/divergingColourData.csv"
+        	},
+        	"key": "state",
+        	"fields": ["VoteDiff"] 
+        }
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "geoshape", "stroke":"lightgray", "strokeWidth": 0.5},
+      "encoding": {
+        "color": {
+          "field": "VoteDiff",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "redblue"
+          }
+        },
+        "tooltip": [{"field": "properties.name", "title": "State"}]
+      }
+    },
+    {
+      "data": {
+        "url": "https://poluskg.github.io/FIT3179/Assignment_2/data/cleanedWeightStates.csv"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        }
+      },
+      "layer": [{
+        "mark": {
+          "type": "text"
+        },
+        "encoding": {
+          "text": {"field": "Weight", "type": "nominal"},
+          "color": {"value": "white"},
+          "tooltip": [
+            {"field": "state", "title": "State"},
+            {"field": "Weight", "title": "Vote Weight"}
+          ]
+        }
+      }]
+    }
+  ]
+}
