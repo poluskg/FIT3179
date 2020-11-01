@@ -6,23 +6,46 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
   <!-- Import vega-embed -->
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <style>
+    .topright {
+      position: absolute;
+      top: 8px;
+      right: 16px;
+      font-size: 18px;
+     }
+
+    .topleft {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+      font-size: 18px;
+    }
+
+    .page{
+      width: 900px;    
+      background-color: white;   
+      margin: auto;
+      padding: 50px;
+      padding-top: 35px;
+    }
+  </style>
 </head>
 <body>
+  <div class="page">
+    <h1>Analysis of the 2016 US Presidential Election</h1>
+    <br>
 
-<h1>Analysis of the 2016 US Presidential Election</h1>
-<br>
+    <h2>Select a state to filter the below visualisations</h2>
+    <div id="linked_vis"></div>
 
-<h2>Select a state to filter the below visualisations</h2>
-<div id="linked_vis"></div>
+    <script type="text/javascript">
+      var specVis1 = "./js/linked_visualisations.vg.json";
 
-<script type="text/javascript">
-  var specVis1 = "./js/linked_visualisations.vg.json";
+      vegaEmbed('#linked_vis', specVis1).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
 
-  vegaEmbed('#linked_vis', specVis1).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  
-</script>
-
+    </script>
+  </div>
 </body>
 </html>
