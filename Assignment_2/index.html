@@ -12,31 +12,16 @@
 <h1>Analysis of the 2016 US Presidential Election</h1>
 <br>
 
-<h2>Electoral Vote</h2>
-<div id="map"></div>
-
-<h2>Demographic Breakdown by State</h2>
-<div id="pie_chart"></div>
-  
-<h2>Linked Visualisations</h2>
+<h2>Select a state to filter the below visualisations</h2>
 <div id="linked_vis"></div>
 
 <script type="text/javascript">
-  var specVis1= "./js/map.vg.json"; 
-  var specVis2 = "./js/donut.json";
-  var specVis3 = "./js/linked_map_and_donut.vg.json";
+  var specVis1 = "./js/linked_visualisations.vg.json";
 
-  vegaEmbed('#map', specVis1).then(function(result) {
+  vegaEmbed('#linked_vis', specVis1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-   vegaEmbed('#pie_chart', specVis2).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  
-  vegaEmbed('#linked_vis', specVis3).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
 </script>
 
 </body>
