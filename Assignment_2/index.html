@@ -6,17 +6,24 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
   <!-- Import vega-embed -->
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <!DOCTYPE html>
+<html>
+<head>
   <style>
+  	body{
+      background-color: gray;
+    }
+    
     .topright {
       position: absolute;
       top: 8px;
       right: 16px;
       font-size: 18px;
-     }
+    }
 
     .topleft {
       position: absolute;
-      top: 8px;
+      top: 200px;
       left: 16px;
       font-size: 18px;
     }
@@ -28,13 +35,33 @@
       padding: 50px;
       padding-top: 35px;
     }
+    
+    .newspaper {
+      column-count: 2;
+    }
   </style>
 </head>
 <body>
   <div class="page">
     <h1>Analysis of the 2016 US Presidential Election</h1>
     <br>
-
+    <div>
+    The results of the 2016 US Presidential Election were controversial to say the least.
+With the announcement of Donald Trump winning the Presidency in favour of the opposing candidate, Hilary Clinton, many questioned the legitimacy of the outcome. 
+</div>
+<br>
+<div>
+The Electoral College is a group of presidential electors who are required by the United States Constitution to form every four years for the sole purpose of electing both the President and Vice President of the United States.
+</div>
+<br>
+<div>
+There are 538 electors and an absolute majority of electoral votes, 270 or more, is required to win the election. The annotated map displays the allocated electoral votes to each state. These weights are based on populations from the previous Census.
+</div>
+<br>
+<div>
+Donald J. Trump won the Electoral College with 304 votes in comparison to Hilary Clinton’s 227 votes. 7 electors voted for other candidates.
+</div>
+<br>
     <h2>Select a state to filter the below visualisations</h2>
     <div id="linked_vis"></div>
 
@@ -46,6 +73,7 @@
       }).catch(console.error);
 
     </script>
+    
   </div>
 </body>
 </html>
