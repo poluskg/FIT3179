@@ -11,3 +11,11 @@
   left: 16px;
   font-size: 18px;
 }
+
+.page{
+  width: 900px;    
+  background-color: white;   
+  margin: auto;
+  padding: 50px;
+  padding-top: 35px;
+}
