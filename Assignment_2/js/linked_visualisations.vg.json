@@ -77,26 +77,43 @@
   },
   {
     "data": {
-        "url": "https://poluskg.github.io/FIT3179/Assignment_2/data/cleaned_state_data.csv"
-        },
-        "transform": [{"filter": {"selection": "click"}}],
-        "mark": {"type": "arc", "innerRadius": 50},
-          "encoding": {
-            "theta": {"field": "Dem_pop", "type": "quantitative"},
-            "color": {
-              "field": "Demographic",
-              "type": "nominal",
-              "scale": {"range": ["#AFCBDF", "#DBA035", "#8D77E0", "#F08EAA", "#8BEB89"]}
-            },
-            "tooltip": [
-              {"field": "state", "title": "State"},
-              {"field": "Demographic"},
-              {"field": "Dem_pop", "title": "Demographic Population", "format": ","}
-            ]
-          },
-          "width": 450,
-          "height": 450,
-          "view": {"stroke": "null"}
+      "url": "https://poluskg.github.io/FIT3179/Assignment_2/data/cleaned_state_data.csv"
+    },
+    "transform": [{"filter": {"selection": "click"}}],
+    "mark": {"type": "arc", "innerRadius": 50},
+    "encoding": {
+      "theta": {"field": "Dem_pop", "type": "quantitative"},
+      "color": {
+        "field": "Demographic",
+        "type": "nominal",
+        "scale": {"range": ["#AFCBDF", "#DBA035", "#8D77E0", "#F08EAA", "#8BEB89"]}
+      },
+      "tooltip": [
+        {"field": "state", "title": "State"},
+        {"field": "Demographic"},
+        {"field": "Dem_pop", "title": "Demographic Population", "format": ","}
+        ]
+    },
+    "width": 300,
+    "height": 300,
+    "view": {"stroke": "null"}
+    },
+    {
+      "data": {
+        "url": "https://poluskg.github.io/FIT3179/Assignment_2/data/folded_party_data.csv"
+      },
+      "transform": [{"filter": {"selection": "click"}}],
+      "mark": {
+        "type": "line",
+        "point": true
+      },
+      "width": {"step": 100},
+      "height": 250,
+      "encoding": {
+        "x": {"field": "Year", "type": "ordinal"},
+        "y": {"aggregate": "mean", "field": "Vote_Count", "type": "quantitative"},
+        "color": {"field": "Party_Name", "type": "nominal"}
       }
+    }
   ]
 }
