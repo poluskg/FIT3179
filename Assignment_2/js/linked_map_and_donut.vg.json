@@ -1,0 +1,102 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "vconcat": [
+  {
+    "title": "United States of America - 2016 Presidential Election",
+    "projection": {"type": "albersUsa"},
+    "data": {
+      "url": "https://poluskg.github.io/FIT3179/week_9/js/ne_110m_admin_1_states_provinces.json",
+      "format": {"type": "topojson", "feature": "ne_110m_admin_1_states_provinces"}
+    },
+    "transform": [
+      {
+        "lookup": "properties.name",
+        "from": {
+          "data": {
+            "url": "https://poluskg.github.io/FIT3179/Assignment_2/data/divergingColourData.csv"
+          },
+          "key": "state",
+          "fields": ["VoteDiff", "Dem_16", "Rep_16", "Other_16", "VoteRange"] 
+        }
+      }
+      ],
+      "layer": [
+        {
+          "mark": {"type": "geoshape", "stroke":"lightgray", "strokeWidth": 0.5},
+          "encoding": {        
+            "color": {
+              "field": "VoteRange",
+              "type": "quantitative",
+              "sort": "descending",
+              "scale":{
+                "scheme": "redblue"
+              }
+            },
+            "tooltip": [
+              {"field": "properties.name", "title": "State"},
+              {"field": "Dem_16", "title": "Democrat Party", "format": ","},
+              {"field": "Rep_16", "title": "Republican Party", "format": ","},
+              {"field": "VoteDiff", "title": "Rep/Dem Vote Diff", "format": ","},
+              {"field": "Other_16", "title": "Other Parties", "format": ","}
+            ]
+          },
+          "selection": {"click": {"type": "single", "fields": ["state"]}},
+          "width": 800,
+          "height": 800
+        },
+        {
+          "data": {
+            "url": "https://poluskg.github.io/FIT3179/Assignment_2/data/cleanedWeightStates.csv"
+          },
+          "encoding": {
+            "longitude": {
+              "field": "longitude",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "latitude",
+              "type": "quantitative"
+            }
+          },
+          "layer": [{
+            "mark": {
+              "type": "text"
+            },
+            "encoding": {
+              "text": {"field": "Weight", "type": "nominal"},
+              "color": {"value": "white"},
+              "size": {"value": "20"},
+              "tooltip": [
+                {"field": "state", "title": "State"},
+                {"field": "Weight", "title": "Vote Weight"}
+              ]
+            }
+          }]
+        }
+      ]
+  },
+  {
+    "data": {
+        "url": "https://poluskg.github.io/FIT3179/Assignment_2/data/cleaned_state_data.csv"
+        },
+        "transform": [{"filter": {"selection": "click"}}],
+        "mark": {"type": "arc", "innerRadius": 50},
+          "encoding": {
+            "theta": {"field": "Dem_pop", "type": "quantitative"},
+            "color": {
+              "field": "Demographic",
+              "type": "nominal",
+              "scale": {"range": ["#AFCBDF", "#DBA035", "#8D77E0", "#F08EAA", "#8BEB89"]}
+            },
+            "tooltip": [
+              {"field": "state", "title": "State"},
+              {"field": "Demographic"},
+              {"field": "Dem_pop", "title": "Demographic Population", "format": ","}
+            ]
+          },
+          "width": 450,
+          "height": 450,
+          "view": {"stroke": "null"}
+      }
+  ]
+}
