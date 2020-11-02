@@ -38,6 +38,5 @@
       {"field": "Votes", "title": "% of Demographic", "format": ".1%"},
       {"field": "Pct_Pop", "title": "% of Voter Population", "format": ".1%"}
     ]
-  },
-  "width": 60
+  }
 }
