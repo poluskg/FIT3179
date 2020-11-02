@@ -6,7 +6,7 @@
     "attr_selection": {
       "bind": "legend",
       "type": "multi",
-      "fields": ["Age_Category"]
+      "fields": ["Education"]
     }
   },
   "encoding": {
@@ -34,7 +34,7 @@
       "value": 0.2
     },
     "tooltip": [
-      {"field": "IncomeGroup", "title": "Level of Income"},
+      {"field": "Education", "title": "Level of Education"},
       {"field": "Candidate"},
       {"field": "Votes", "title": "% of Demographic", "format": ".1%"},
       {"field": "Pct_Pop", "title": "% of Voter Population", "format": ".1%"}
