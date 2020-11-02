@@ -2,6 +2,13 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {"url": "https://poluskg.github.io/FIT3179/Assignment_2/data/VoterDemographic.csv"},
   "mark": "bar",
+  "selection": {
+    "attr_selection": {
+      "bind": "legend",
+      "type": "multi",
+      "fields": ["Demographic"]
+    }
+  },
   "encoding": {
     "x": {
       "field": "Candidate",
@@ -21,11 +28,16 @@
         "scheme": "lighttealblue"
       }
     },
+    "opacity": {
+      "condition": {"selection": "attr_selection", "value": 1},
+      "value": 0.2
+    },
     "tooltip": [
       {"field": "Demographic"},
       {"field": "Candidate"},
       {"field": "Votes", "title": "% of Demographic", "format": ".1%"},
       {"field": "Pct_Pop", "title": "% of Voter Population", "format": ".1%"}
     ]
-  }
+  },
+  "width": 100
 }
