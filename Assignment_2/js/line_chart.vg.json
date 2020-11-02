@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://poluskg.github.io/FIT3179/Assignment_2/data/VoterTurnout.csv"
+  },
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {"field": "Year"},
+    "y": {"field": "Value", "type": "quantitative", "title": null},
+    "color": {
+      "field": "Category",
+      "legend": null
+    },
+    "tooltip": [
+      {"field": "Year"},
+      {"field": "Category"},
+      {"field": "Value", "title": "Amount", "format":","}
+    ]
+  },
+  "width": 400,
+  "height": 300
+}
