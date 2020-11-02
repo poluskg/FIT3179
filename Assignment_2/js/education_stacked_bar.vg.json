@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {"url": "https://poluskg.github.io/FIT3179/Assignment_2/data/VoterEducationStatus.csv"},
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Candidate",
+      "type": "nominal",
+      "title": "Candidate"
+    },
+    "y": {
+      "field": "Votes",
+      "type": "quantitative",
+      "stack":  "normalize"
+    },
+    "color": {
+      "field": "Education",
+      "type": "nominal",
+      "title": "Level of Education",
+      "sort": "descending",
+      "scale": {
+        "scheme": "greens"
+      }
+    },
+    "tooltip": [
+      {"field": "IncomeGroup", "title": "Level of Income"},
+      {"field": "Candidate"},
+      {"field": "Votes", "title": "% of Demographic", "format": "%"},
+      {"field": "Pct_Pop", "title": "% of Voter Population", "format": "%"}
+    ]
+  }
+}
