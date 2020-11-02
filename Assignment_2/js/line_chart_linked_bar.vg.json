@@ -44,7 +44,6 @@
           "scale": {"range": ["purple", "teal"]}
         },
         "tooltip": [
-          {"field": "Year"},
           {"field": "Category"},
           {"field": "Value", "title": "% of Eligible Voters", "format":".1%"}
         ]
