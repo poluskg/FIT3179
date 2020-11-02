@@ -40,5 +40,5 @@
       {"field": "Pct_Pop", "title": "% of Voter Population", "format": ".1%"}
     ]
   },
-  "width": 100
+  "width": 75
 }
