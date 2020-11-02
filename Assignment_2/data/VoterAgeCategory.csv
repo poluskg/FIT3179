@@ -1,20 +1,9 @@
-﻿Age_Category,Pct_Pop,Clinton,Trump,
-18-29,13,58,28,
-30-49,30,51,40,
-50-64,29,45,51,
-65 and up,27,44,53,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
+﻿Age_Category,Pct_Pop,Candidate,Votes
+18-29,13,Clinton,58
+18-29,13,Trump,28
+30-49,30,Clinton,51
+30-49,30,Trump,40
+50-64,29,Clinton,45
+50-64,29,Trump,51
+65 and up,27,Clinton,44
+65 and up,27,Trump,53

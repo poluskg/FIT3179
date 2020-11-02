@@ -1,20 +1,9 @@
-﻿Demographic,Pct_Pop,Clinton,Trump,
-White,74,39,54,
-Black,10,91,6,
-Hispanic,10,66,28,
-Other/Mixed Race,5,59,32,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
+﻿Demographic,Pct_Pop,Candidate,Votes
+White,74,Clinton,39
+White,74,Trump,54
+Black,10,Clinton,91
+Black,10,Trump,6
+Hispanic,10,Clinton,66
+Hispanic,10,Trump,28
+Other/Mixed Race,5,Clinton,59
+Other/Mixed Race,5,Trump,32
