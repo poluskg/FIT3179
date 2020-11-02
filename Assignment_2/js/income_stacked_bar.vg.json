@@ -1,24 +1,22 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "data": {"url": "https://poluskg.github.io/FIT3179/Assignment_2/data/VoterIncomeCategory.csv"},
+  "data": {
+    "url": "https://poluskg.github.io/FIT3179/Assignment_2/data/VoterIncomeCategory.csv"
+  },
   "mark": "bar",
   "selection": {
     "attr_selection": {
       "bind": "legend",
       "type": "multi",
-      "fields": ["Age_Category"]
+      "fields": ["IncomeGroup"]
     }
   },
   "encoding": {
-    "x": {
-      "field": "Candidate",
-      "type": "nominal",
-      "title": "Candidate"
-    },
+    "x": {"field": "Candidate", "type": "nominal", "title": "Candidate"},
     "y": {
       "field": "Votes",
       "type": "quantitative",
-      "stack":  "normalize",
+      "stack": "normalize",
       "sort": "ascending"
     },
     "color": {
@@ -26,9 +24,7 @@
       "type": "nominal",
       "title": "Income Group",
       "sort": "descending",
-      "scale": {
-        "scheme": "yelloworangebrown"
-      }
+      "scale": {"scheme": "yelloworangebrown"}
     },
     "opacity": {
       "condition": {"selection": "attr_selection", "value": 1},
