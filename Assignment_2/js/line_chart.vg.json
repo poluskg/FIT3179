@@ -12,12 +12,13 @@
     "y": {"field": "Value", "type": "quantitative", "title": null},
     "color": {
       "field": "Category",
-      "legend": null
+      "title": null,
+      "scale": {"range": ["purple", "teal"]}
     },
     "tooltip": [
       {"field": "Year"},
       {"field": "Category"},
-      {"field": "Value", "title": "Amount", "format":","}
+      {"field": "Value", "title": "% of Eligible Voters", "format":","}
     ]
   },
   "width": 400,
