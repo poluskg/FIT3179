@@ -1,36 +1,21 @@
-﻿Year,Category,Value,Percentage of Eligible Voters,,,,,,
-1980,Voter Turnout,86496851,0.541841048,,,,,,
-1980,Eligible Voters,159635102,1,,,,,,
-1980,Registered Voters,113036958,0.70809588,,,,,,
-1984,Voter Turnout,92654861,0.552497371,,,,,,
-1984,Eligible Voters,167701904,1,,,,,,
-1984,Registered Voters,124184647,0.740508271,,,,,,
-1988,Voter Turnout,91586725,0.527636274,,,,,,
-1988,Eligible Voters,173579281,1,,,,,,
-1988,Registered Voters,126381202,0.728089212,,,,,,
-1992,Voter Turnout,104600366,0.582227389,,,,,,
-1992,Eligible Voters,179655523,1,,,,,,
-1992,Registered Voters,133821178,0.744876505,,,,,,
-1996,Voter Turnout,96389818,0.51725971,,,,,,
-1996,Eligible Voters,186347044,1,,,,,,
-1996,Registered Voters,146211960,0.784621837,,,,,,
-2000,Voter Turnout,105594024,0.54337078,,,,,,
-2000,Eligible Voters,194331436,1,,,,,,
-2000,Registered Voters,156421311,0.804920265,,,,,,
-2004,Voter Turnout,122349480,0.601274831,,,,,,
-2004,Eligible Voters,203483455,1,,,,,,
-2004,Registered Voters,174800000,0.859037901,,,,,,
-2008,Voter Turnout,131406895,0.616027068,,,,,,
-2008,Eligible Voters,213313508,1,,,,,,
-2008,Registered Voters,146310000,0.685891866,,,,,,
-2012,Voter Turnout,129139997,0.580472022,,,,,,
-2012,Eligible Voters,222474111,1,,,,,,
-2012,Registered Voters,153160000,0.688439654,,,,,,
-2016,Voter Turnout,136787187,0.592326892,,,,,,
-2016,Eligible Voters,230931921,1,,,,,,
-2016,Registered Voters,157596000,0.68243489,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
+"","Year","Category","Value","Percentage.of.Eligible.Voters"
+"1",1980,"Voter Turnout",86496851,0.541841048
+"3",1980,"Registered Voters",113036958,0.70809588
+"4",1984,"Voter Turnout",92654861,0.552497371
+"6",1984,"Registered Voters",124184647,0.740508271
+"7",1988,"Voter Turnout",91586725,0.527636274
+"9",1988,"Registered Voters",126381202,0.728089212
+"10",1992,"Voter Turnout",104600366,0.582227389
+"12",1992,"Registered Voters",133821178,0.744876505
+"13",1996,"Voter Turnout",96389818,0.51725971
+"15",1996,"Registered Voters",146211960,0.784621837
+"16",2000,"Voter Turnout",105594024,0.54337078
+"18",2000,"Registered Voters",156421311,0.804920265
+"19",2004,"Voter Turnout",122349480,0.601274831
+"21",2004,"Registered Voters",174800000,0.859037901
+"22",2008,"Voter Turnout",131406895,0.616027068
+"24",2008,"Registered Voters",146310000,0.685891866
+"25",2012,"Voter Turnout",129139997,0.580472022
+"27",2012,"Registered Voters",153160000,0.688439654
+"28",2016,"Voter Turnout",136787187,0.592326892
+"30",2016,"Registered Voters",157596000,0.68243489
