@@ -24,8 +24,8 @@
     "tooltip": [
       {"field": "Demographic"},
       {"field": "Candidate"},
-      {"field": "Votes", "title": "% of Demographic", "format": "%"},
-      {"field": "Pct_Pop", "title": "% of Voter Population", "format": "%"}
+      {"field": "Votes", "title": "% of Demographic", "format": ".1%"},
+      {"field": "Pct_Pop", "title": "% of Voter Population", "format": ".1%"}
     ]
   }
 }
