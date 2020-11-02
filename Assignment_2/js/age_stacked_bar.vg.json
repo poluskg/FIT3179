@@ -2,6 +2,13 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {"url": "https://poluskg.github.io/FIT3179/Assignment_2/data/VoterAgeCategory.csv"},
   "mark": "bar",
+  "selection": {
+    "attr_selection": {
+      "bind": "legend",
+      "type": "multi",
+      "fields": ["Age_Category"]
+    }
+  },
   "encoding": {
     "x": {
       "field": "Candidate",
@@ -15,12 +22,16 @@
       "sort": "descending"
     },
     "color": {
-    "field": "Age_Category",
-    "title": "Age Group",
-    "type": "nominal",
-    "scale": {
-      "scheme": "purples"
-      }
+      "field": "Age_Category",
+      "title": "Age Group",
+      "type": "nominal",
+      "scale": {
+        "scheme": "purples"
+        }
+    },
+    "opacity": {
+      "condition": {"selection": "attr_selection", "value": 1},
+      "value": 0.2
     },
     "tooltip": [
       {"field": "Age_Category", "title": "Age Group"},
@@ -28,5 +39,6 @@
       {"field": "Votes", "title": "% of Demographic", "format": ".1%"},
       {"field": "Pct_Pop", "title": "% of Voter Population", "format": ".1%"}
     ]
-  }
+  },
+  "width": 100
 }
