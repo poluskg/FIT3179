@@ -1,0 +1,151 @@
+﻿State,VoteABS,Party,VotePCT
+Alabama,1318250,Repblican,0.6208
+Alabama,729547,Democrat,0.3436
+Alabama,75570,Other,0.0356
+Arizona,1252401,Repblican,0.4764
+Arizona,1161167,Democrat,0.4417
+Arizona,215188,Other,0.0819
+Arkansas,684872,Repblican,0.6061
+Arkansas,380494,Democrat,0.3368
+Arkansas,64530,Other,0.0571
+California,4483810,Repblican,0.3162
+California,8753788,Democrat,0.6173
+California,943997,Other,0.0666
+Colorado,1202484,Repblican,0.4325
+Colorado,1338870,Democrat,0.4816
+Colorado,238866,Other,0.0859
+Connecticut,673215,Repblican,0.4093
+Connecticut,897572,Democrat,0.5457
+Connecticut,74133,Other,0.0451
+Delaware,185127,Repblican,0.4179
+Delaware,235603,Democrat,0.5318
+Delaware,22267,Other,0.0503
+District of Columbia,12723,Repblican,0.0409
+District of Columbia,282830,Democrat,0.9086
+District of Columbia,15715,Other,0.0505
+Florida,4617886,Repblican,0.4902
+Florida,4504975,Democrat,0.4782
+Florida,297178,Other,0.0315
+Georgia,2089104,Repblican,0.5077
+Georgia,1877963,Democrat,0.4564
+Georgia,147644,Other,0.0359
+Hawaii,128847,Repblican,0.3004
+Hawaii,266891,Democrat,0.6222
+Hawaii,33199,Other,0.0774
+Idaho,409055,Repblican,0.5925
+Idaho,189765,Democrat,0.2748
+Idaho,91613,Other,0.1327
+Illinois,2146015,Repblican,0.3861
+Illinois,3090729,Democrat,0.5560
+Illinois,321963,Other,0.0579
+Indiana,1557286,Repblican,0.5694
+Indiana,1033126,Democrat,0.3777
+Indiana,144546,Other,0.0529
+Iowa,800983,Repblican,0.5115
+Iowa,653669,Democrat,0.4174
+Iowa,111379,Other,0.0711
+Kansas,671018,Repblican,0.5665
+Kansas,427005,Democrat,0.3605
+Kansas,86380,Other,0.0729
+Kentucky,1202971,Repblican,0.6252
+Kentucky,628854,Democrat,0.3268
+Kentucky,92324,Other,0.0480
+Louisiana,1178638,Repblican,0.5809
+Louisiana,780154,Democrat,0.3845
+Louisiana,70240,Other,0.0346
+Maine,334945,Repblican,0.4502
+Maine,354718,Democrat,0.4768
+Maine,54278,Other,0.0730
+Maryland,943169,Repblican,0.3391
+Maryland,1677928,Democrat,0.6033
+Maryland,160349,Other,0.0576
+Massachusetts,1090893,Repblican,0.3331
+Massachusetts,1995196,Democrat,0.6093
+Massachusetts,188466,Other,0.0576
+Michigan,2279543,Repblican,0.4750
+Michigan,2268839,Democrat,0.4727
+Michigan,250902,Other,0.0523
+Minnesota,1322951,Repblican,0.4492
+Minnesota,1367716,Democrat,0.4644
+Minnesota,254146,Other,0.0863
+Mississippi,700714,Repblican,0.5794
+Mississippi,485131,Democrat,0.4011
+Mississippi,23512,Other,0.0194
+Missouri,1569857,Repblican,0.5860
+Missouri,973333,Democrat,0.3633
+Missouri,135590,Other,0.0506
+Montana,279240,Repblican,0.5617
+Montana,177709,Democrat,0.3575
+Montana,40198,Other,0.0809
+Nebraska,495961,Repblican,0.5875
+Nebraska,284454,Democrat,0.3370
+Nebraska,63772,Other,0.0755
+Nevada,512058,Repblican,0.4550
+Nevada,539260,Democrat,0.4792
+Nevada,74067,Other,0.0658
+New Hampshire,345790,Repblican,0.4646
+New Hampshire,348526,Democrat,0.4683
+New Hampshire,49980,Other,0.0672
+New Jersey,1601933,Repblican,0.4135
+New Jersey,2148278,Democrat,0.5545
+New Jersey,123835,Other,0.0320
+New Mexico,319667,Repblican,0.4004
+New Mexico,385234,Democrat,0.4826
+New Mexico,93418,Other,0.1170
+New York,2814589,Repblican,0.3652
+New York,4547562,Democrat,0.5900
+New York,345212,Other,0.0448
+North Carolina,2362631,Repblican,0.4983
+North Carolina,2189316,Democrat,0.4617
+North Carolina,189617,Other,0.0400
+North Dakota,216794,Repblican,0.6296
+North Dakota,93758,Democrat,0.2723
+North Dakota,33808,Other,0.0982
+Ohio,2841005,Repblican,0.5169
+Ohio,2394164,Democrat,0.4356
+Ohio,261318,Other,0.0475
+Oklahoma,949136,Repblican,0.6532
+Oklahoma,420375,Democrat,0.2893
+Oklahoma,83481,Other,0.0575
+Oregon,782403,Repblican,0.3909
+Oregon,1002106,Democrat,0.5007
+Oregon,216827,Other,0.1083
+Pennsylvania,2970733,Repblican,0.4858
+Pennsylvania,2926441,Democrat,0.4785
+Pennsylvania,218228,Other,0.0357
+Rhode Island,180490,Repblican,0.3895
+Rhode Island,251888,Democrat,0.5435
+Rhode Island,31038,Other,0.0670
+South Carolina,1155389,Repblican,0.5494
+South Carolina,855373,Democrat,0.4067
+South Carolina,92265,Other,0.0439
+South Dakota,227480,Repblican,0.6195
+South Dakota,114948,Democrat,0.3130
+South Dakota,24760,Other,0.0674
+Tennessee,1522925,Repblican,0.6072
+Tennessee,870695,Democrat,0.3472
+Tennessee,114407,Other,0.0456
+Texas,4685047,Repblican,0.5223
+Texas,3877868,Democrat,0.4324
+Texas,406311,Other,0.0453
+Utah,515231,Repblican,0.4554
+Utah,310676,Democrat,0.2746
+Utah,305523,Other,0.2700
+Vermont,95369,Repblican,0.3027
+Vermont,178573,Democrat,0.5668
+Vermont,41135,Other,0.1306
+Virginia,1769443,Repblican,0.4441
+Virginia,1981473,Democrat,0.4973
+Virginia,233715,Other,0.0587
+Washington,1221747,Repblican,0.3807
+Washington,1742718,Democrat,0.5430
+Washington,244749,Other,0.0763
+West Virginia,489371,Repblican,0.6863
+West Virginia,188794,Democrat,0.2648
+West Virginia,34886,Other,0.0489
+Wisconsin,1404440,Repblican,0.4720
+Wisconsin,1381823,Democrat,0.4644
+Wisconsin,189490,Other,0.0637
+Wyoming,174419,Repblican,0.6817
+Wyoming,55973,Democrat,0.2188
+Wyoming,25457,Other,0.0995
