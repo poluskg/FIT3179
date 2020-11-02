@@ -25,8 +25,8 @@
     "tooltip": [
       {"field": "IncomeGroup", "title": "Level of Income"},
       {"field": "Candidate"},
-      {"field": "Votes", "title": "% of Demographic", "format": "%"},
-      {"field": "Pct_Pop", "title": "% of Voter Population", "format": "%"}
+      {"field": "Votes", "title": "% of Demographic", "format": ".1%"},
+      {"field": "Pct_Pop", "title": "% of Voter Population", "format": ".1%"}
     ]
   }
 }
