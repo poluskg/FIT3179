@@ -63,7 +63,7 @@ Donald J. Trump won the Electoral College with 304 votes in comparison to Hilary
 </div>
 <br>
     <h2>Select a state to filter the below visualisations</h2>
-    <div id="linked_vis"></div>
+    <div id="map"></div>
     <br>
     <div class="w3-row-padding">
       <div class="w3-col s3" id="age_vis"></div>
@@ -77,14 +77,14 @@ Donald J. Trump won the Electoral College with 304 votes in comparison to Hilary
     <div id="line_vis"></div>
    
     <script type="text/javascript">
-      var specVis1 = "./js/linked_visualisations.vg.json";
+      var specVis1 = "./js/map.vg.json";
       var specVis3 = "./js/age_stacked_bar.vg.json";
       var specVis4 = "./js/demographic_stacked_bar.vg.json";
       var specVis5 = "./js/education_stacked_bar.vg.json";
       var specVis6 = "./js/income_stacked_bar.vg.json";
       var specVis7 = "./js/line_chart.vg.json";
       
-      vegaEmbed('#linked_vis', specVis1).then(function(result) {
+      vegaEmbed('#map_vis', specVis1).then(function(result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
       
