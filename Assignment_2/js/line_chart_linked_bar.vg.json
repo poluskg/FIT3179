@@ -3,7 +3,7 @@
   "hconcat": [
     {
       "data": {
-        "url": "https://poluskg.github.io/FIT3179/Assignment_2/data/VoterTurnout.csv"
+        "url": "https://poluskg.github.io/FIT3179/Assignment_2/data/VoterEngagementByDemographic.csv"
       },
       "mark": {
         "type": "line",
@@ -11,16 +11,33 @@
       },
       "encoding": {
         "x": {"field": "Year"},
-        "y": {"field": "Value", "type": "quantitative", "title": null},
+        "y": {"field": "percentageEngagement", "type": "quantitative", "title": null},
         "color":{
-          "field": "Category",
+          "field": "Demographic",
           "title": null,
-          "scale": {"range": ["purple", "teal"]}
+          "scale": {"range": [
+            "darkorange",
+            "darkgreen",
+            "gold",
+            "grey",
+            "#3CB371",
+            "lightgreen",
+            "lightblue"
+            ]
+          },
+          "legend": {
+            "values": [
+              "White",
+              "Black",
+              "Hispanic",
+              "Other"
+            ]
+          }
         },
         "tooltip": [
           {"field": "Year"},
-          {"field": "Category"},
-          {"field": "Value", "title": "% of Eligible Voters", "format":".1%"}
+          {"field": "Demographic"},
+          {"field": "percentageEngagement", "title": "% of Voter Engagement", "format":".1%"}
         ]
       },
       "width": 400,
@@ -34,20 +51,23 @@
       "mark": {
         "type": "bar"
       },
-      "transform": [{"filter": {"selection": "brush"}}],
       "encoding": {
         "x": {"field": "Category", "title": null},
-        "y": {"field": "Value", "type": "quantitative", "title": null},
+        "y": {
+          "field": "Percentage of Eligible Voters",
+          "type": "quantitative",
+          "title": null
+        },
         "color": {
           "field": "Category",
-          "title": null,
-          "scale": {"range": ["purple", "teal"]}
+          "title": null
         },
         "tooltip": [
           {"field": "Category"},
-          {"field": "Value", "title": "% of Eligible Voters", "format":".1%"}
+          {"field": "Percentage of Eligible Voters", "title": "Voter Engagement", "format":".1%"}
         ]
       },
+      "transform": [{"filter": {"selection": "brush"}}],
       "width": 200,
       "height": 300
     }
