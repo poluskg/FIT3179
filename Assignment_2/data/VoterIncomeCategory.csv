@@ -1,0 +1,7 @@
+﻿IncomeGroup,Pct_Pop,Candidate,Votes
+"$75,000 or more",0.33,Clinton,0.45
+"$75,000 or more",0.33,Trump,0.49
+"$30,00-$74,999",0.38,Clinton,0.45
+"$30,00-$74,999",0.38,Trump,0.5
+"Less than $30,000",0.28,Clinton,0.58
+"Less than $30,000",0.28,Trump,0.32
