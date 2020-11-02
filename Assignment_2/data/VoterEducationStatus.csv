@@ -1,20 +1,7 @@
-﻿Education,Pct_Pop,Clinton,Trump,
-College Grad +,37,57,36,
-Some College,34,42,49,
-HS or Less,30,44,51,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
+﻿Education,Pct_Pop,Candidate,Votes
+College Grad +,37,Clinton,57
+College Grad +,37,Trump,36
+Some College,34,Clinton,42
+Some College,34,Trump,49
+HS or Less,30,Clinton,44
+HS or Less,30,Trump,51
