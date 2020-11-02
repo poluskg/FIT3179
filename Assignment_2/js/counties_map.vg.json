@@ -1,0 +1,40 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+	"title": "United States of America - 2016 Presidential Election by County",
+	"width": 700,
+	"height": 500,
+	"projection": {"type": "albersUsa"},
+    "data": {
+      "url": "https://poluskg.github.io/FIT3179/Assignment_2/data/gz_2010_us_050_00_20m.json",
+      "format": {"type": "topojson", "feature": "gz_2010_us_050_00_20m"}
+    },
+    "transform": [
+      {
+        "lookup": "properties.NAME",
+        "from": {
+          "data": {
+            "url": "https://poluskg.github.io/FIT3179/Assignment_2/data/counties.csv"
+          },
+          "key": "county",
+          "fields": ["state", "party"]
+        }
+      }
+    ],
+    "layer": [{
+      "mark": {"type": "geoshape", "stroke":"lightgray", "strokeWidth": 0.5},
+      "encoding": {
+        "color": {
+          "field": "party",
+          "title": "Party",
+          "type": "nominal",
+          "scale": {
+            "range": ["lightgrey", "#4e69ed", "#318738", "#f55e53"]
+          }
+        },
+      "tooltip": [
+        {"field": "state", "title": "State"},
+        {"field": "county", "title": "County"}
+      ]
+    } 
+	}]
+}
